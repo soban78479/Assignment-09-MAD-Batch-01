@@ -1,0 +1,202 @@
+console.log("Hello World!")
+
+// 1. Write a TypeScript program to list the properties of a TypeScript object.
+// var student = {
+// name : "David Rayy",
+// sclass : "VI",
+// rollno : 12 };
+// // Sample Output: name,sclass,rollno
+// var studentKeys=   Object.getOwnPropertyNames(student);
+// console.log(studentKeys)
+
+// 2. Write a TypeScript program to delete the rollno property from the following object.
+//  Also print the object before or after deleting the property.
+// var student = {
+// name : "David Rayy",
+// sclass : "VI",
+// rollno : 12
+//  };
+
+// delete (student as any).rollno;
+// console.log(student)
+
+// 3. Write a TypeScript program to get the length of a TypeScript object.   
+// var student = {
+// name : "David Rayy",
+// sclass : "VI",
+// rollno : 12 };
+
+// console.log(Object.keys(student).length)
+
+// 4. Write a TypeScript program to display the reading status
+//  (i.e. display book name, author name and reading status) of the following books.   
+
+// var library = [ 
+//    {
+//        author: 'Bill Gates',
+//        title: 'The Road Ahead',
+//        readingStatus: true
+//    },
+//    {
+//        author: 'Steve Jobs',
+//        title: 'Walter Isaacson',
+//        readingStatus: true
+//    },
+//    {
+//        author: 'Suzanne Collins',
+//        title:  'Mockingjay: The Final Book of The Hunger Games', 
+//        readingStatus: false
+//    }];
+
+
+//    for (let index = 0; index < library.length; index++) {
+//   console.log("Author :"+library[index].author )
+//   console.log("Title :"+library[index].title )
+//   console.log("ReadindStatus :"+library[index].readingStatus )
+
+//    }
+
+// 5. Write a TypeScript program to get the volume of a Cylinder with four decimal places using object classes.   
+// Volume of a cylinder : V = πr2h
+// where r is the radius and h is the height of the cylinder.
+
+// class cylinderClass {
+//     // radius:number;
+//     // height:number; 
+//     pi=3.14;
+//     volume:number;
+//    calculate(radius:number,height:number){
+
+//  this.volume= this.pi*radius*2*height;
+
+//     return this.volume;
+//    }
+// }
+
+// var volumeOriginal = new cylinderClass();
+
+//  var result=  volumeOriginal.calculate(12,45)
+
+// console.log(result.toFixed(4));
+
+// 6. Write a Bubble Sort algorithm in TypeScript.   
+// Note : Bubble sort is a simple sorting algorithm that works
+//  by repeatedly stepping through the list to be sorted,
+// var array = [6, 4, 0, 3, -2, 1]
+// var middleNumber;
+// for (let i = 0; i < array.length; i++) {
+//     for (let j = i + 1; j < array.length; j++) {
+//         if (array[j] < array[i]) {
+//             middleNumber = array[i]
+//             array[i] = array[j]
+//             array[j] = middleNumber;
+//         }
+//     }
+// }
+// console.log(array)
+
+// 7. Write a TypeScript program which returns a subset of a string. 
+// var text:string= "dog";
+// for (let i = 0; i < text.length; i++) {
+//     console.log(text.charAt(i))
+//     for (let j = i + 1; j < text.length; j++) {
+//         console.log(text.slice(i,j+1))
+//     }
+// }
+
+// 8. Write a TypeScript program to create a Clock.   
+
+// for (let h = 0; h < 24; h++) {
+
+//     for (let i = 0; i < 60; i++) {
+//         for (let j = 0; j < 60; j++) {
+//             for (let k = 0; k < 100; k++) {
+
+//                 console.log(h + " : " + i + " : " + j)
+//             }
+
+//         }
+//     }
+
+// }
+
+// 9. Write a TypeScript program to calculate the area and perimeter of a circle.   
+// Note : Create two methods to calculate the area and perimeter. The radius of the 
+// circle will be supplied by the user.
+
+// var radius = prompt("Enter radius of circle", "")
+// var radiusValue = parseFloat(radius);
+
+// function areaFunction(radiusValue: number) {
+//     let areaValue = 3.14 * radiusValue * radiusValue;
+//     return areaValue;
+// }
+// var area = areaFunction(radiusValue)
+// console.log(area.toFixed(4))
+
+// function perimeterFunction(RadiusValue: number) {
+//     let perimeterValue = 3.14 *2* RadiusValue;
+//     return perimeterValue;
+// }
+// var perimeter = perimeterFunction(radiusValue)
+// console.log(perimeter.toFixed(4))
+
+// 11. Write a TypeScript function to print all the methods in an TypeScript object. 
+// var firstObject;
+// var person =
+// {
+// firstName:"Soban",
+// lastName:"Hanif",
+// firstFunction:function() { } ,
+// secondFunction:function() { } ,
+// thirdFunction:function() { } 
+// }
+
+// function getFunction(firstObject:object){
+//      let functionNames= Object.getOwnPropertyNames(firstObject).filter(function(p){
+//         return typeof firstObject[p]=== 'function'
+//     });
+//     return functionNames;
+// }
+
+// var getFunctionList = getFunction(person)
+// console.log(getFunctionList)
+
+// 12. Write a TypeScript function to parse an URL. 
+//  function tryJsonParse(data: any): any | undefined {
+//     try {
+//         return JSON.parse(data);
+//     } catch (e) {
+//         return data;
+//     }
+// }
+
+// var url = tryJsonParse("https://google.com")
+
+// console.log(url);
+
+// 13. Write a TypeScript function to retrieve all the names of object's own and inherited properties.
+// var person = {
+//     name: "David Rayy",
+//     father_name: "jack"
+// };
+
+// var student = {
+//     __proto__: person,
+
+//     rollno: 12
+// };
+
+// var personKeys = Object.getPrototypeOf(student);
+// var personProperties = Object.getOwnPropertyNames(personKeys);
+// var studentProperties = Object.getOwnPropertyNames(student);
+// for (let index = 0; index < personProperties.length; index++) {
+//     studentProperties.push(personProperties[index])
+
+// }
+
+// console.log(studentProperties)
+
+
+
+
